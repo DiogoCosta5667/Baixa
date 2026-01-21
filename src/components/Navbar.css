@@ -58,7 +58,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--navy);
+  background: linear-gradient(90deg, var(--turquoise), var(--purple));
   transition: width 0.3s ease;
 }
 

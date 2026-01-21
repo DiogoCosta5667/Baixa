@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e0f7ff 50%, #f0e7ff 100%);
 }
 
 .hero-background {
@@ -21,7 +21,7 @@
 .hero-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(10, 37, 64, 0.1) 0%, rgba(10, 37, 64, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(94, 212, 224, 0.2) 0%, rgba(167, 139, 250, 0.15) 100%);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -61,10 +61,13 @@
 .hero-title {
   font-size: clamp(4rem, 10vw, 8rem);
   font-weight: 700;
-  color: var(--navy);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--turquoise) 50%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
-  text-shadow: 2px 2px 4px rgba(10, 37, 64, 0.1);
+  text-shadow: none;
 }
 
 .hero-subtitle {
@@ -88,16 +91,16 @@
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--navy);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--turquoise) 100%);
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(10, 37, 64, 0.3);
+  box-shadow: 0 4px 15px rgba(94, 212, 224, 0.4);
 }
 
 .hero-button:hover {
-  background-color: var(--navy-light);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(10, 37, 64, 0.4);
+  background: linear-gradient(135deg, var(--turquoise) 0%, var(--purple) 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(94, 212, 224, 0.6);
 }
 
 .hero-button:active {

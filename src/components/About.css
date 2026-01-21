@@ -106,7 +106,7 @@
 .about-divider {
   width: 80px;
   height: 4px;
-  background-color: var(--navy);
+  background: linear-gradient(90deg, var(--turquoise), var(--purple));
   margin-bottom: 2rem;
   border-radius: 2px;
 }
