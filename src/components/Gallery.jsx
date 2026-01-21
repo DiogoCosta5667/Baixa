@@ -89,20 +89,8 @@ function Gallery() {
     : artworks.filter(art => art.category === filter);
 
   const openLightbox = (artwork) => {
-    setSelectedImage(ar{`gallery-filters ${isVisible ? 'fade-in-up' : ''}`}>
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              className={`filter-btn ${filter === cat.id ? 'active' : ''}`}
-              onClick={() => setFilter(cat.id)}
-            >
-              {cat.name}
-            </button>
-          ))}
-        </div>
-
-        <div className="gallery-grid">
-          {filteredA
+    setSelectedImage(artwork);
+  };
 
   const closeLightbox = () => {
     setSelectedImage(null);
@@ -118,8 +106,20 @@ function Gallery() {
           Explore a coleção de trabalhos únicos
         </p>
 
+        <div className={`gallery-filters ${isVisible ? 'fade-in-up' : ''}`}>
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              className={`filter-btn ${filter === cat.id ? 'active' : ''}`}
+              onClick={() => setFilter(cat.id)}
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
+
         <div className="gallery-grid">
-          {artworks.map((artwork, index) => (
+          {filteredArtworks.map((artwork, index) => (
             <div
               key={artwork.id}
               className={`gallery-item ${isVisible ? 'fade-in-up' : ''}`}
@@ -139,11 +139,7 @@ function Gallery() {
                 </div>
               </div>
             </div>
-          ))  <SocialShare 
-                url={window.location.href} 
-                title={`${selectedImage.title} - Baixa Arte`} 
-              />
-            }
+          ))}
         </div>
       </div>
 
@@ -155,6 +151,10 @@ function Gallery() {
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>
               <p>{selectedImage.description}</p>
+              <SocialShare 
+                url={window.location.href} 
+                title={`${selectedImage.title} - Baixa Arte`} 
+              />
             </div>
           </div>
         </div>
