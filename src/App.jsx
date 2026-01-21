@@ -9,6 +9,9 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import CustomCursor from './components/CustomCursor'
+import ScrollProgress from './components/ScrollProgress'
+import LoadingScreen from './components/LoadingScreen'
 import './App.css'
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
 
   return (
     <div className="App">
+      <LoadingScreen />
+      <CustomCursor />
+      <ScrollProgress />
       <Navbar scrolled={scrolled} />
       <Hero />
       <Gallery />

@@ -50,6 +50,21 @@ img {
   display: block;
 }
 
+/* Lazy loading para imagens */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Smooth scroll melhorado */
+html {
+  scroll-padding-top: 80px;
+}
+
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {
   width: 10px;

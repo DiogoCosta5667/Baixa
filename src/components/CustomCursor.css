@@ -1,0 +1,56 @@
+.custom-cursor,
+.custom-cursor-follower {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor {
+  background: linear-gradient(135deg, var(--turquoise), var(--purple));
+  transition: transform 0.1s ease;
+  transform-origin: center;
+}
+
+.custom-cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--turquoise);
+  background: transparent;
+  transition: transform 0.3s cubic-bezier(0.75, -0.5, 0, 1.75);
+  margin: -10px 0 0 -10px;
+}
+
+.custom-cursor.hover {
+  transform: scale(0.5);
+}
+
+.custom-cursor-follower.hover {
+  transform: scale(1.5);
+  border-color: var(--purple);
+}
+
+/* Esconder cursor padrão */
+body {
+  cursor: none;
+}
+
+a, button, .gallery-item {
+  cursor: none !important;
+}
+
+@media (max-width: 768px) {
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none;
+  }
+  
+  body {
+    cursor: auto;
+  }
+}
