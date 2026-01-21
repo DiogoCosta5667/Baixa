@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import DarkModeToggle from './DarkModeToggle'
 import './Navbar.css'
 
 function Navbar({ scrolled }) {
@@ -26,8 +27,10 @@ function Navbar({ scrolled }) {
         <div className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <a onClick={() => scrollToSection('home')}>Início</a>
           <a onClick={() => scrollToSection('gallery')}>Galeria</a>
+          <a onClick={() => scrollToSection('pricing')}>Encomendas</a>
           <a onClick={() => scrollToSection('about')}>Sobre</a>
           <a onClick={() => scrollToSection('contact')}>Contacto</a>
+          <DarkModeToggle />
         </div>
 
         <div className="navbar-hamburger" onClick={toggleMenu}>

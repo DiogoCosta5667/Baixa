@@ -1,0 +1,89 @@
+.dark-mode-toggle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--turquoise), var(--purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(94, 212, 224, 0.3);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: 0 4px 15px rgba(94, 212, 224, 0.5);
+}
+
+.dark-mode-toggle svg {
+  width: 22px;
+  height: 22px;
+  color: var(--white);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --navy: #ffffff;
+  --navy-light: #e0e0e0;
+  --white: #1a1a2e;
+  --gray-light: #16213e;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode {
+  background-color: #0f0e17;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: rgba(15, 14, 23, 0.95);
+}
+
+body.dark-mode .navbar.scrolled {
+  background-color: rgba(15, 14, 23, 0.98);
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #0f0e17 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+body.dark-mode .gallery,
+body.dark-mode .pricing,
+body.dark-mode .contact {
+  background-color: #0f0e17;
+}
+
+body.dark-mode .testimonials,
+body.dark-mode .about,
+body.dark-mode .faq {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+}
+
+body.dark-mode .gallery-item,
+body.dark-mode .pricing-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .about-stat,
+body.dark-mode .contact-info-item,
+body.dark-mode .faq-item {
+  background-color: #1a1a2e;
+  border-color: rgba(94, 212, 224, 0.3);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #16213e;
+  color: #ffffff;
+}
+
+body.dark-mode .lightbox {
+  background-color: rgba(15, 14, 23, 0.95);
+}
+
+body.dark-mode .lightbox-content {
+  background-color: #1a1a2e;
+}
+
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #16213e 0%, #0f0e17 100%);
+}

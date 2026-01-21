@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
+import Testimonials from './components/Testimonials'
+import Pricing from './components/Pricing'
 import About from './components/About'
+import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 import './App.css'
 
 function App() {
@@ -24,9 +28,13 @@ function App() {
       <Navbar scrolled={scrolled} />
       <Hero />
       <Gallery />
+      <Testimonials />
+      <Pricing />
       <About />
+      <FAQ />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }
